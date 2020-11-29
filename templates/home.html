@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static%}
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+#myVideo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        min-width:100%;
+        min-height:100%;
+        width:auto;
+        height:auto;
+        z-index: -1;
+        
+    }
+
+img{
+    border-radius: 100%;
+    border-color: rgb(66, 104, 187);
+    border-style:ridge;
+    border-width:10px;
+}
+p{
+  color:white;
+}
+
+  table,th,td{
+
+    border: 0px solid black;
+  }
+
+</style>
+</head>
+<body>
+ 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color:white; font-weight: bolder; font-size:35px;">DiGiHealth</a>
+    </div>
+   
+    <ul class="nav navbar-nav">
+    
+      <li><a href="{{link2}}" style="color:white; font-weight: bolder; font-size:15px;">HOME</a></li>
+      <li><a href="https://librarianresources.taylorandfrancis.com/collection/medical-library/"style="color:white; font-weight: bolder; font-size:15px;">LIBRARY</a></li>
+      <li><a href="http://127.0.0.1:8000/service/"style="color:white; font-weight: bolder; font-size:15px;">AMENITY</a></li>
+    <li><a href="https://calendar.google.com/calendar/u/0/r?pli=1"style="color:white; font-weight: bolder; font-size:15px;">CALENDER</a></li>
+    <li><a href="https://www.google.co.in/maps/@19.120128,72.8891392,12z"style="color:white; font-weight: bolder; font-size:15px;">MAP</a></li>
+   
+    </ul> 
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href={{link1}} style="color:white; font-weight: bolder; font-size:20px;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href={{link}} style="color:white; font-weight: bolder; font-size:20px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<table border="0px;" width="100%">
+<tr style="height:100px;">
+  <td width="20%" align="center"><h3></h3></td>
+  <td width="20%" align="center"><h3></h3></td>
+  <td width="20%" align="center"><h3><a href="{{link4}}"><img  style="border-radius: 100%;"src="{% static "pics/symptoms.jpeg"%}" class="img-rounded"  height="150px" width="150px"></a></h3></td>
+  <td width="20%" align="center"><h3></h3></td>
+  <td width="20%" align="center"><h3></h3></td>
+ </tr>
+ <tr style="height:150px;">
+  <td width="20%" align="center"><h3></h3></td>
+  <td width="20%" align="center"><h3><a href='{{link6}}'><img src="{% static "pics/doctors.jpeg"%}" class="img-rounded"  height="150px" width="150px" style="border-radius: 100%;"></a></h3></td>
+  <td width="20%" align="center"><h3><img  style="border-radius: 100%;" src="{% static "pics/middle.jpg"%}" class="img-rounded"  height="250px" width="250px" </h3></td>
+  <td width="20%" align="center"><h3><a href="https://www.mohfw.gov.in/"><img  style="border-radius: 100%;"src="{% static "pics/coronanews.jpeg"%}" class="img-rounded"  height="150px" width="150px"></a></h3></td>
+  <td width="20%" align="center"><h3></h3></td>
+ </tr>
+ <tr style="height:100px;">
+  <td width="20%" align="center"><h3></h3></td>
+  <td width="20%" align="center"><h3></h3><a href={{link3}}><img  style="border-radius: 100%;"src="{% static "pics/aboutdigihealth.jpeg" %}" class="img-rounded"  height="100px" width="150px"></a></td>
+  <td width="20%" align="center"><h3></h3></td>
+  <td width="20%" align="center"><h3><a href='https://www.news-medical.net/category/Medical-Research-News.aspx'><img  style="border-radius: 100%;" src="{% static "pics/research.jpeg"%}" class="img-rounded"  height="100px" width="150px"></a></h3></td>
+  <td width="20%" align="center"><h3></h3></td>
+ </tr>
+ <video autoplay muted loop id="myVideo" src="{% static "bgvideo.mp4" %}"></video>
+</body>
+</html>

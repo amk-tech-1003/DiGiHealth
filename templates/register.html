@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+{% load static%}
+<title>register</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<style> 
+div{
+  background-color: white;
+  width:50%;
+}
+input[type=text]{ 
+        width: 40%; 
+        padding: 12px 20px; 
+       
+    } 
+    input[type=email]{ 
+        width: 40%; 
+        padding: 12px 20px; 
+       
+    } 
+     input[type=Password]{ 
+        width: 40%; 
+        padding: 12px 20px; 
+       
+    } 
+    h1{
+        background:#C70039;
+        color:white;
+    }
+    label{
+          color:black;
+      }
+    button { 
+        background-color: #C70039 ; 
+        color: white; 
+        padding: 14px 20px; 
+        margin: 20px 0;  
+        width: 40%; 
+    } 
+
+    #myVideo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        min-width:100%;
+        min-height:100%;
+        width:auto;
+        height:auto;
+        z-index: -1;
+    }
+      
+  img{
+      height:35%;
+      width:35%;
+  }
+     </style> 
+  </head>
+<body> 
+<section id='home'>
+<br><br><br><br>
+<center>
+<div class='ff'>
+
+    <form>     
+    <br>  
+             <h1><b>Register</h1>
+            <img src = "{% static "pics/LOGO.jpg" %}" 
+                 alt="Avatar" class="avatar"> 
+         <br>    
+<br>
+         <label><b>Full Name:</b></label> 
+            <input type="text" placeholder="Name" name="name" required> <br><br>
+            <label><b>Email address:</b></label> 
+            <input type="email" placeholder="email" name="email" required> <br><br>
+            <label><b>Password:</b></label>
+            <input type="Password" placeholder="password" name="password" required> <br>
+            <button type="submit"><b>SUBMIT</button> 
+     
+    </form> 
+</div>    </center>   
+  <video autoplay muted loop id="myVideo" src="{%static "bgvideo.mp4"%}"></video>
+  </section> 
+</body>  
+</html>

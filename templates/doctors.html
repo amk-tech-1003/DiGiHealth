@@ -1,0 +1,142 @@
+<html>
+<head>
+{%load static%}
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<title>Doctors</title>
+<style>
+    body{
+        font-style: calibiri;
+        font-color:white;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto ;
+        padding: 20px;
+
+    }
+    img{
+        height:200px;
+        width:200px;
+        border-radius:100%;
+        border-color: rgb(66, 104, 187);
+        border-style:ridge;
+        border-width:10px;
+    }
+    #myVideo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        min-width:100%;
+        min-height:100%;
+        width:auto;
+        height:auto;
+        z-index: -1;
+
+    }
+    .blocks{
+        background-color:#494E97;
+        width:80%;
+        padding: 20px;
+        padding-bottom:20px;
+        color:white;
+    }
+    .main{
+        padding-left:100px
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color:white; font-weight: bolder; font-size:35px;">DiGiHealth</a>
+    </div>
+   
+    <ul class="nav navbar-nav">
+    
+      <li><a href="{{link2}}" style="color:white; font-weight: bolder; font-size:15px;">HOME</a></li>
+      <li><a href="https://librarianresources.taylorandfrancis.com/collection/medical-library/"style="color:white; font-weight: bolder; font-size:15px;">LIBRARY</a></li>
+      <li><a href="#"style="color:white; font-weight: bolder; font-size:15px;">AMENITY</a></li>
+    <li><a href="https://calendar.google.com/calendar/u/0/r?pli=1"style="color:white; font-weight: bolder; font-size:15px;">CALENDER</a></li>
+    <li><a href="https://www.google.co.in/maps/@19.120128,72.8891392,12z"style="color:white; font-weight: bolder; font-size:15px;">MAP</a></li>
+   
+    </ul> 
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href={{link1}} style="color:white; font-weight: bolder; font-size:20px;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href={{link}} style="color:white; font-weight: bolder; font-size:20px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+    </div>
+    </nav>
+
+    <div class='main'>
+
+    <div class='grid-container'>
+    <div class='blocks'>
+    <center>
+    <img src="{% static 'pics/kameshwarnath.jpg'%}">
+    <h2>Dr. Kameshwarnath Agnihotri</h2>
+    <h3>Education: MBBS</h3>
+    <h3>Specialist: Neurologist</h3>
+    </center>
+    </div>
+    <div class='blocks'>
+    <center>
+    <img src="{% static 'pics/meena.jpg'%}">
+    <h2>Dr. Meena Agnihotri</h2>
+    <h3>Education: MBBS</h3>
+    <h3>Specialist: Orthopaedic Surgeon</h3>
+    </center>
+    </div>
+    </div>
+    </center>
+
+    
+    
+    <div class='grid-container'>
+    <div class='blocks'>
+    <center>
+    <img src="{% static 'pics/chetan.jpg'%}">
+    <h2>Dr. Chetan Shukla</h2>
+    <h3>Education: MBBS</h3>
+    <h3>Specialist: Anaesthetist</h3>
+    </center>
+    </div>
+    <div class='blocks'>
+    <center>
+    <img src="{% static 'pics/jaya.jpg'%}">
+    <h2>Dr. Jaya Agnihotri</h2>
+    <h3>Education: MBBS</h3>
+    <h3>Specialist: Anaesthetist</h3>
+    </center>
+    </div>
+    </div>
+
+    <div class='grid-container'>
+    <div class='blocks'>
+    <center>
+    <img src="{% static 'pics/chetan.jpg'%}">
+    <h2>Dr. Chetan Shukla</h2>
+    <h3>Education: MBBS</h3>
+    <h3>Specialist: Anaesthetist</h3>
+    </center>
+    </div>
+    <div class='blocks'>
+    <center>
+    <img src="{% static 'pics/aditi.jpg'%}">
+    <h2>Dr. Aditi Agnihotri</h2>
+    <h3>Education: MBBS</h3>
+    <h3>Specialist: Paediatrician</h3>
+    </center>
+    </div>
+    </div>
+    </div>
+<video autoplay muted loop id="myVideo" src="{% static "bgvideo.mp4" %}"></video>
+</body>
+</html>

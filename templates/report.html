@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+{% load static%}
+<title>report</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style> 
+.ff{
+  background-color: white;
+  width:50%;
+}
+    input[type=text]{ 
+        width: 50%; 
+        padding: 12px 20px; 
+       
+    } 
+    label{
+          color:black;
+      }
+    button { 
+        background-color: #C70039 ; 
+        color: white; 
+        padding: 14px 20px; 
+        margin: 20px 0;  
+        width: 40%; 
+    } 
+
+    #myVideo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        min-width:100%;
+        min-height:100%;
+        width:auto;
+        height:auto;
+        z-index: -1;
+    }
+      
+  
+     </style> 
+  </head>
+<body> 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color:white; font-weight: bolder; font-size:35px;">DiGiHealth</a>
+    </div>
+   
+    <ul class="nav navbar-nav">
+    
+      <li><a href="http://127.0.0.1:8000/home/" style="color:white; font-weight: bolder; font-size:15px;">HOME</a></li>
+      <li><a href="https://librarianresources.taylorandfrancis.com/collection/medical-library/"style="color:white; font-weight: bolder; font-size:15px;">LIBRARY</a></li>
+      <li><a href="http://127.0.0.1:8000/service/"style="color:white; font-weight: bolder; font-size:15px;">AMENITY</a></li>
+    <li><a href="https://calendar.google.com/calendar/u/0/r?pli=1"style="color:white; font-weight: bolder; font-size:15px;">CALENDER</a></li>
+    <li><a href="https://www.google.co.in/maps/@19.120128,72.8891392,12z"style="color:white; font-weight: bolder; font-size:15px;">MAP</a></li>
+   
+    </ul> 
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href='http://127.0.0.1:8000/register/' style="color:white; font-weight: bolder; font-size:20px;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href='http://127.0.0.1:8000/login/' style="color:white; font-weight: bolder; font-size:20px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<section id='home'>
+<br><br><br><br>
+<center>
+<div class='ff'>
+<br>
+    <form action="downloadreport">       
+            <img src= "{% static "pics/LOGO.jpg" %}" 
+                 alt="Avatar" class="avatar"> 
+         <br><br> 
+            <label><b>Please Enter your Name:</b></label> <br>
+            <input type="text" placeholder="Name" name="name" required> <br>
+            <button input type="submit">Get Report</button> 
+     
+    </form> 
+</div>    </center>   
+  <video autoplay muted loop id="myVideo" src="{% static "bgvideo.mp4" %}"></video>
+  </section> 
+</body>  
+</html>
