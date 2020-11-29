@@ -26,7 +26,7 @@ SECRET_KEY = 'ktpkf$d-my-0p86z4)j)$uxwh3-ao^g(9ldnwv-22y40n3yt-g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'digital--health.herokuapp.com']
 
 
 # Application definition
